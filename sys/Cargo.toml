@@ -1,6 +1,6 @@
 [package]
 name = "whisper-rs-sys"
-version = "0.8.1"
+version = "0.8.2"
 edition = "2021"
 description = "Rust bindings for whisper.cpp (FFI bindings)"
 license = "Unlicense"
@@ -23,13 +23,19 @@ include = [
     "whisper.cpp/ggml-cuda.cu",
     "whisper.cpp/ggml-cuda.h",
     "whisper.cpp/ggml-impl.h",
+    "whisper.cpp/ggml-kompute.cpp",
+    "whisper.cpp/ggml-kompute.h",
     "whisper.cpp/ggml-metal.h",
     "whisper.cpp/ggml-metal.m",
     "whisper.cpp/ggml-metal.metal",
     "whisper.cpp/ggml-opencl.cpp",
     "whisper.cpp/ggml-opencl.h",
-    "whisper.cpp/ggml-quants.h",
     "whisper.cpp/ggml-quants.c",
+    "whisper.cpp/ggml-quants.h",
+    "whisper.cpp/ggml-sycl.cpp",
+    "whisper.cpp/ggml-sycl.h",
+    "whisper.cpp/ggml-vulkan.cpp",
+    "whisper.cpp/ggml-vulkan.h",
     "whisper.cpp/LICENSE",
     "whisper.cpp/whisper.cpp",
     "whisper.cpp/whisper.h",
