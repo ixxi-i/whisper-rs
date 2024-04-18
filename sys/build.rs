@@ -87,6 +87,8 @@ fn main() {
                 let out_path = PathBuf::from(env::var("OUT_DIR").unwrap());
                 b.write_to_file(out_path.join("bindings.rs"))
                     .expect("Couldn't write bindings!");
+                // print where bindings are written
+                // println!("cargo:warning=Bindings generated at: {}", out_path.join("bindings.rs").display());
             }
             Err(e) => {
                 println!("cargo:warning=Unable to generate bindings: {}", e);

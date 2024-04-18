@@ -573,6 +573,15 @@ impl WhisperContextParameters {
     fn to_c_struct(&self) -> whisper_rs_sys::whisper_context_params {
         whisper_rs_sys::whisper_context_params {
             use_gpu: self.use_gpu,
+            gpu_device: 0,
+            dtw_token_timestamps: false,
+            dtw_aheads_preset: whisper_rs_sys::whisper_alignment_heads_preset_WHISPER_AHEADS_NONE,
+            dtw_n_top: 0,
+            dtw_aheads: whisper_rs_sys::whisper_aheads {
+                n_heads: 1,
+                heads: std::ptr::null_mut(),
+            },
+            dtw_mem_size: 0,
         }
     }
 }
